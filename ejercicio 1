@@ -1,0 +1,25 @@
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class encontrarDirectorios {
+
+	public static void main(String[] args) {
+		final String archivo = "C:\\";//la ruta se declaro a qui 
+		try(DirectoryStream<Path> mostrar = Files.newDirectoryStream(Paths.get(archivo))){// se usa try para capturar las escepciones 
+			for(Path enlace : mostrar) {// se recorre la lista
+				if (Files.isDirectory(enlace)) { 
+				System.out.println(enlace.getFileName());// aqui se muetran los archivos
+				}
+			}
+		}catch(IOException e) { 
+				System.out.println("Error "+e);// se muestra la escepcion  
+		}
+			}
+		 
+		
+		  
+		}
+
