@@ -1,0 +1,32 @@
+package com.aa.parcial;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Segundoejercicio {
+
+	public static void main(String[] args) {
+		File archivo = null;
+		//alli vamos a ir a escribir el archivo
+		try { 
+			archivo = new File("C:\\Users\\allan\\OneDrive\\Escritorio\\PARCIAL.AA\\allan.txt");
+			System.out.println("se ah creado el archivo correctamente" + archivo);
+			
+		if  (true) {
+			FileWriter escribir = new FileWriter (archivo);
+			
+			escribir.write("Hola mundo");
+			escribir.close();
+
+			//si no puede crear el archivo o no tiene permisos desplegara error
+		}
+	        } catch (IOException e) {
+	            System.out.println("error al crear el archivo");
+			
+			
+			
+	}
+		}
+	}
+	 
